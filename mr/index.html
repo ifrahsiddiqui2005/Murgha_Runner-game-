@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Murgha Runner 3D</title><meta name="theme-color" content="#8fd3ff">
+<link rel="manifest" href="manifest.json"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="style.css"></head><body>
+
+<canvas id="c"></canvas>
+<div id="ld" class="ov show dim" style="color:#fff">Loading…</div>
+<div id="hud"><div id="sc">0</div><div id="pb"></div><div><div id="cn">🪙 0</div><button class="bt s" id="bp">❚❚</button></div></div>
+<div id="cd"></div><div id="pops"></div>
+<div id="tc"><div><button data-a="l">◀</button><button data-a="r">▶</button></div><div><button data-a="u">▲</button><button data-a="d">▼</button></div></div>
+<div id="menu" class="ov" style="justify-content:space-between"><h1>MURGHA<br>RUNNER 3D</h1>
+<div class="card"><div class="row"><span id="mb"></span><span id="mc"></span></div><button class="bt" id="play">▶ PLAY</button>
+<div class="row"><button class="bt s" id="skb">🐔 Skins</button><button class="bt s" id="hwb">❓ How to play</button></div>
+<div id="ms" class="sm"></div>
+<div class="row sm"><label>🔊 <input type="checkbox" id="snd"></label><label>🎵 <input type="range" id="mv" min="0" max="1" step=".05"></label><label>🔔 <input type="range" id="sv" min="0" max="1" step=".05"></label></div></div></div>
+<div id="skin" class="ov" style="justify-content:flex-end"><div class="card"><b>Choose your rooster</b><div id="sk"></div><button class="bt" id="skx">Back</button></div></div>
+<div id="how" class="ov dim"><div class="card"><b>How to play</b><div class="sm">⌨️ A/D or ◀ ▶ change lane · W/↑/Space jump · S/↓ slide · P/Esc pause<br>📱 Swipe left, right, up, down or use the buttons<br>Jump over crates and barriers, slide under yellow gantries, dodge cars and trucks.<br>🧲 Magnet · 🛡️ Shield (blocks one hit) · ×2 Coins · ⚡ Boost (faster and smashes through)<br>Spend coins on new skins and finish daily missions for bonus coins.</div><button class="bt" id="hx">OK</button></div></div>
+<div id="pause" class="ov dim"><div class="card"><b>Paused</b><button class="bt g" id="pr">Resume</button><button class="bt" id="prs">Restart</button><button class="bt s" id="pm">Main Menu</button></div></div>
+<div id="over" class="ov dim"><div class="card"><h1 style="font-size:40px">GAME OVER</h1>
+<div>Score <b id="os"></b> · Distance <b id="od"></b></div><div>Coins <b id="oc"></b> · Best <b id="ob"></b></div><div id="on" class="sm"></div>
+<button class="bt g" id="pa">▶ Play Again</button><button class="bt s" id="om">Main Menu</button></div></div>
+<script src="vendor/three.min.js"></script>
+<script src="src/main.js"></script>
+<script>if('serviceWorker' in navigator&&location.protocol.indexOf('http')===0)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))</script>
+</body></html>
